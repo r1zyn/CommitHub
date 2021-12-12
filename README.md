@@ -19,6 +19,7 @@
 
 ## About
 *CommitHub is currently under development.*
+<br />
 CommitHub is a CLI for pushing commits to GitHub repositories. It reduces the number of commands required to be executed and compacts into one command.
 
 * Written in TypeScript/NodeJS
