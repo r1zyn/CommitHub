@@ -1,0 +1,14 @@
+node_modules
+build
+
+.eslintrc
+.prettierrc
+.prettierignore
+.npmignore
+.gitignore
+
+.gitattributes
+.github
+
+package.json
+package-lock.json

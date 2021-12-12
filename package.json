@@ -1,0 +1,68 @@
+{
+    "name": "commithub",
+    "version": "1.0.0",
+    "description": "A CLI for pushing commits to GitHub repositories.",
+    "license": "Apache-2.0",
+    "author": "Ascendus <ascendus.dev@gmail.com> (https://github.com/Ascendus)",
+    "contributors": [
+        {
+            "name": "Ascendus",
+            "email": "ascendus.dev@gmail.com",
+            "url": "https://github.com/Ascendus"
+        }
+    ],
+    "keywords": [
+        "CLI",
+        "GitHub",
+        "repository",
+        "commit"
+    ],
+    "scripts": {
+        "build": "tsc && npm run prettier && npm run package",
+        "lint": "eslint \"*/**/*.{js, ts, jsx, tsx}\" --quiet --fix",
+        "parse": "npm run lint && npm run prettier",
+        "package": "pkg .",
+        "prettier": "prettier --write build",
+        "test": "echo Error: no test specified && exit 1"
+    },
+    "main": "./build/cli.js",
+    "bin": {
+        "ch": "./build/cli.js"
+    },
+    "dependencies": {
+        "yargs": "^17.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.11.12",
+        "@types/yargs": "^17.0.7",
+        "@typescript-eslint/eslint-plugin": "^5.6.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "eslint": "^8.4.1",
+        "eslint-config-airbnb": "^19.0.2",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.1.2",
+        "pkg": "^5.5.1",
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.3"
+    },
+    "engines": {
+        "node": "^16.5.0",
+        "npm": "^7.19.1",
+        "vscode": "^1.22.0"
+    },
+    "pkg": {
+        "scripts": "build/**/*.js"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,ts,jsx,tsx}": [
+            "eslint --fix"
+        ]
+    }
+}
