@@ -1,4 +1,7 @@
 <br />
+<br />
+<img src=".github/assets/Banner.svg" align="center" />
+<br />
 <p align="center">
     <a href="https://github.com/Ascendus/CommitHub/releases" target="_blank">
         <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge&&cacheSeconds=2592000" />
